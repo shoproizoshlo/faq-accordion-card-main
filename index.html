@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -14,71 +13,109 @@
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
-      <!-- <img src="./images/bg-pattern-desktop.svg" alt="background image" /> -->
-      <div>
-        <img
-          src="./images/illustration-woman-online-desktop.svg"
-          alt="illustration woman"
-        />
-        <!-- <img
-          src="./images/illustration-box-desktop.svg"
-          alt="illustration box"
-        /> -->
-      </div>
-      <div>
-        <p>FAQ</p>
-        <div>
-          <p>How many team members can I invite?</p>
-          <img src="./images/icon-arrow-down.svg" alt="icon arrow down" />
-          <p>
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </p>
+      <img
+        src="./images/illustration-box-desktop.svg"
+        alt="illustration box"
+        class="illustration-box"
+      />
+      <div class="container d-flex">
+        <div class="image">
+          <div class="background-image">
+            <img
+              src="./images/illustration-woman-online-desktop.svg"
+              alt="illustration woman"
+              class="illustration-woman"
+            />
+          </div>
         </div>
-        <div>
-          <p>What is the maximum file upload size?</p>
-          <img src="./images/icon-arrow-down.svg" alt="icon arrow down" />
-          <p>
-            No more than 2GB. All files in your account must fit your allotted
-            storage space.
-          </p>
-        </div>
-        <div>
-          <p>How do I reset my password?</p>
-          <img src="./images/icon-arrow-down.svg" alt="icon arrow down" />
-          <p>
-            Click “Forgot password” from the login page or “Change password”
-            from your profile page. A reset link will be emailed to you.
-          </p>
-        </div>
-        <div>
-          <p>Can I cancel my subscription?</p>
-          <img src="./images/icon-arrow-down.svg" alt="icon arrow down" />
-          <p>
-            Yes! Send us a message and we’ll process your request no questions
-            asked.
-          </p>
-        </div>
-        <div>
-          <p>Do you provide additional support?</p>
-          <img src="./images/icon-arrow-down.svg" alt="icon arrow down" />
-          <p>
-            Chat and email support is available 24/7. Phone lines are open
-            during normal business hours.
-          </p>
+        <div class="faq d-flex-column align-items-center">
+          <h1>FAQ</h1>
+          <div class="artikel pt-3 pb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>How many team members can I invite?</p>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+              />
+            </div>
+            <!-- <p class="pt-2">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p> -->
+          </div>
+          <div class="artikel pt-3 pb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>What is the maximum file upload size?</p>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+              />
+            </div>
+            <p class="pt-2 pe-2">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </div>
+          <div class="artikel pt-3 pb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>How do I reset my password?</p>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+              />
+            </div>
+            <!-- <p class="pt-2">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p> -->
+          </div>
+          <div class="artikel pt-3 pb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>Can I cancel my subscription?</p>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+              />
+            </div>
+            <!-- <p class="pt-2">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p> -->
+          </div>
+          <div class="artikel pt-3 pb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>Do you provide additional support?</p>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+              />
+            </div>
+            <!-- <p class="pt-2">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p> -->
+          </div>
         </div>
       </div>
     </main>
@@ -90,5 +127,10 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
