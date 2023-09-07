@@ -53,7 +53,7 @@ p {
   margin: 5% auto 3% auto;
   padding: 0;
   max-width: 900px;
-  height: 450px;
+  height: 500px;
   background-color: white;
   border: 0 solid;
   border-radius: 25px;
@@ -90,7 +90,7 @@ p {
   height: 40%;
 }
 .faq {
-  padding: 50px 100px;
+  padding: 50px 80px;
   flex: 1;
 }
 .artikel {
@@ -99,15 +99,23 @@ p {
 .icon-arrow-down {
   height: 100%;
   cursor: pointer;
+  transform: rotate(0deg); /* Устанавливаем начальный угол поворота */
+  transition: transform 0.5s ease;
 }
 .toggle-text {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.1s ease;
+  /* transition: max-height 0.3s ease; */
 }
 .open {
   max-height: 1000px; /* Высота текста при открытии */
-  transition: max-height 0.9s ease;
+  transition: max-height 0.1s ease;
+  /* transition: max-height 0.9s ease; */
+}
+.closing {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
 }
 .hidden {
   display: none;
