@@ -89,7 +89,7 @@ p {
   height: 40%;
 }
 .faq {
-  padding: 50px 100px;
+  padding: 50px 100px 50px 80px;
   flex: 1;
 }
 .artikel {
