@@ -49,12 +49,6 @@ body {
 p {
   margin: 0;
 }
-/* .illustration-box {
-  position: relative;
-  top: 478px;
-  right: -23px;
-  z-index: 2;
-} */
 .container {
   margin: 5% auto 3% auto;
   padding: 0;
@@ -103,10 +97,16 @@ p {
 }
 .icon-arrow-down {
   height: 100%;
+  cursor: pointer;
+}
+.toggle-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 .open {
   max-height: 1000px; /* Высота текста при открытии */
-  transition: max-height 0.5s ease;
+  transition: max-height 0.9s ease;
 }
 .hidden {
   display: none;
