@@ -1,19 +1,25 @@
 const toggleButtons = document.querySelectorAll(".icon-arrow-down");
 const toggleTexts = document.querySelectorAll(".toggle-text");
-var currentOpenButton = null;
+var questionTexts = document.querySelectorAll(".question"); // Находим все элементы с классом "question"
 
-toggleButtons.forEach((button) =>
+let currentOpenButton = null;
+
+toggleButtons.forEach((button, index) =>
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("data-target");
     const targetElement = document.getElementById(targetId);
+    const questionElement = button.nextElementSibling; // Получаем следующий элемент после кнопки
 
+    // Проверяем, если есть текущая открытая стрелка
     if (currentOpenButton && currentOpenButton !== button) {
       const currentTargetId = currentOpenButton.getAttribute("data-target");
       const currentTargetElement = document.getElementById(currentTargetId);
+      const currentQuestionText = questionTexts[index]; // Получаем соответствующий элемент с классом "question"
 
       currentTargetElement.classList.remove("open");
       currentOpenButton.classList.remove("closing");
       currentOpenButton.classList.remove("rotated");
+      currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
     }
 
     // Закрываем текущий текст
@@ -24,6 +30,7 @@ toggleButtons.forEach((button) =>
       targetElement.classList.add("open");
       button.classList.add("closing");
     }
+    questionTexts[index].classList.toggle("bold");
 
     // Обновляем текущую открытую стрелку
     currentOpenButton = button;
