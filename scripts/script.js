@@ -5,6 +5,12 @@ toggleButtons.forEach((button) =>
     const targetId = button.getAttribute("data-target");
     const targetElement = document.getElementById(targetId);
 
+    document.querySelectorAll(".toggle-text").forEach((text) => {
+      if (text.id !== targetId) {
+        text.classList.remove("open");
+      }
+    });
+
     if (targetElement.classList.contains("open")) {
       targetElement.classList.remove("open");
       button.style.transform = "rotate(0deg)";
