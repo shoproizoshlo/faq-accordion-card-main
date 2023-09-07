@@ -62,7 +62,7 @@ p {
   font-size: 12px;
 }
 .image {
-  flex: 1.3;
+  flex: 1.2;
   background-image: url(/images/bg-pattern-desktop.svg);
   background-size: 230%;
   background-position-y: -280px;
@@ -77,21 +77,24 @@ p {
 }
 .illustration-woman {
   position: absolute;
-  height: 77%;
-  top: 50%;
-  left: 39%;
+  height: 75%;
+  top: 46%;
+  left: 38%;
   transform: translate(-50%, -50%);
 }
 .illustration-box {
   position: absolute;
   z-index: 2;
-  top: 204px;
-  right: 314px;
-  height: 39%;
+  top: 189px;
+  right: 311px;
+  height: 35%;
 }
 .faq {
-  padding: 50px 80px;
+  padding: 60px 80px;
   flex: 1;
+}
+.faq h1 {
+  font-weight: 700;
 }
 .artikel {
   border-bottom: 2px solid hsl(240, 5%, 91%);
@@ -107,6 +110,9 @@ p {
   overflow: hidden;
   transition: max-height 0.1s ease;
   /* transition: max-height 0.3s ease; */
+}
+.question {
+  font-weight: 700;
 }
 .open {
   max-height: 1000px; /* Высота текста при открытии */
