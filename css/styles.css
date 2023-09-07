@@ -104,6 +104,13 @@ p {
 .icon-arrow-down {
   height: 100%;
 }
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+.hidden {
+  display: none;
+}
 /* footer */
 .attribution {
   font-size: 11px;
