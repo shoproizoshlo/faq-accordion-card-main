@@ -8,7 +8,10 @@ toggleButtons.forEach((button, index) =>
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("data-target");
     const targetElement = document.getElementById(targetId);
-    const questionElement = button.nextElementSibling; // Получаем следующий элемент после кнопки
+
+    questionTexts.forEach((question) => {
+      question.classList.remove("bold");
+    });
 
     // Проверяем, если есть текущая открытая стрелка
     if (currentOpenButton && currentOpenButton !== button) {
