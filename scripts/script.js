@@ -15,9 +15,6 @@ toggleLine.forEach((line, index) => {
     questionTexts.forEach((question) => {
       question.classList.remove("bold");
     });
-    toggleButtons.forEach((button) => {
-      button.classList.remove("closing");
-    });
 
     // Проверяем, если есть текущая открытая строка
     if (currentOpenLine && currentOpenLine !== line) {
@@ -28,7 +25,7 @@ toggleLine.forEach((line, index) => {
 
       currentTargetElement.classList.remove("open");
       currentOpenLine.classList.remove("closing");
-      currentToggleButtons.classList.remove("rotated");
+      currentToggleButtons.classList.remove("closing");
       currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
     }
 
