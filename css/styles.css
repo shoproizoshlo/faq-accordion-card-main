@@ -102,6 +102,10 @@ p {
 .q-line:hover {
   cursor: pointer;
 }
+.q-line:active {
+  color: hsl(14, 88%, 65%);
+  transition: transform 0.9s ease;
+}
 .icon-arrow-down {
   height: 100%;
   transition: transform 0.5s ease;
