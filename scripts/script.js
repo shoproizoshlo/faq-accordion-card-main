@@ -25,26 +25,11 @@ toggleLine.forEach((line, index) => {
 
       currentTargetElement.classList.remove("open");
       currentOpenLine.classList.remove("closing");
-      currentToggleButtons.classList.remove("closing");
       currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
+      toggleButtons.forEach((button) => {
+        button.classList.remove("closing");
+      });
     }
-
-    // toggleButtons.forEach((button, index) =>
-    //   button.addEventListener("click", () => {
-    //     // Проверяем, если есть текущая открытая стрелка
-    //     if (currentOpenButton && currentOpenButton !== button) {
-    //       const currentTargetId = currentOpenButton.getAttribute("data-target");
-    //       const currentTargetElement = document.getElementById(currentTargetId);
-    //       const currentQuestionText = questionTexts[index]; // Получаем соответствующий элемент с классом "question"
-
-    //       currentTargetElement.classList.remove("open");
-    //       currentOpenButton.classList.remove("closing");
-    //       currentOpenButton.classList.remove("rotated");
-    //       currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
-    //     }
-
-    //     // Обновляем текущую открытую стрелку
-    //     currentOpenButton = button;
 
     // Закрываем текущий текст
     if (targetElement.classList.contains("open")) {
@@ -56,7 +41,7 @@ toggleLine.forEach((line, index) => {
     questionTexts[index].classList.toggle("bold");
     toggleButtons[index].classList.toggle("closing");
 
-    // Обновляем текущую открытую стрелку
+    // Обновляем текущую открытую строку
     currentOpenLine = line;
   });
 });

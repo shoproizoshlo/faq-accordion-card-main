@@ -104,8 +104,6 @@ p {
 }
 .icon-arrow-down {
   height: 100%;
-  /* cursor: pointer; */
-  transform: rotate(0deg); /* Устанавливаем начальный угол поворота */
   transition: transform 0.5s ease;
 }
 .toggle-text {
@@ -118,9 +116,13 @@ p {
   font-weight: 700;
 }
 .open {
-  max-height: 1000px; /* Высота текста при открытии */
+  max-height: 100px; /* Высота текста при открытии */
   transition: max-height 0.1s ease;
   /* transition: max-height 0.9s ease; */
+}
+.opening {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
 }
 .closing {
   transform: rotate(180deg);
