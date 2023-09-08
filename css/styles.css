@@ -143,3 +143,36 @@ p {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    margin: 30% auto 10% auto;
+    width: 328px;
+  }
+  .image {
+    background-image: url(/images/bg-pattern-mobile.svg);
+    background-size: 75%;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .background-image {
+    position: relative;
+    overflow: visible;
+  }
+  .illustration-woman {
+    height: 125%;
+    top: -11%;
+    left: 50%;
+  }
+  .illustration-box {
+    top: -42px;
+    right: 192px;
+    height: 65%;
+  }
+  .faq {
+    padding: 0 30px 50px 30px;
+  }
+  .faq h1 {
+    text-align: center;
+  }
+}
