@@ -77,9 +77,9 @@ p {
 }
 .illustration-woman {
   position: absolute;
-  height: 75%;
-  top: 46%;
-  left: 38%;
+  height: 379px;
+  top: 235px;
+  left: 154px;
   transform: translate(-50%, -50%);
 }
 .illustration-box {
@@ -87,7 +87,7 @@ p {
   z-index: 2;
   top: 189px;
   right: 311px;
-  height: 35%;
+  height: 174px;
 }
 .faq {
   padding: 60px 80px;
