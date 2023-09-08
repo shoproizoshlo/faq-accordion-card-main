@@ -99,9 +99,12 @@ p {
 .artikel {
   border-bottom: 2px solid hsl(240, 5%, 91%);
 }
+.q-line:hover {
+  cursor: pointer;
+}
 .icon-arrow-down {
   height: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
   transform: rotate(0deg); /* Устанавливаем начальный угол поворота */
   transition: transform 0.5s ease;
 }

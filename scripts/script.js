@@ -1,51 +1,81 @@
 const toggleButtons = document.querySelectorAll(".icon-arrow-down");
+const toggleLine = document.querySelectorAll(".q-line");
 const toggleTexts = document.querySelectorAll(".toggle-text");
 var questionTexts = document.querySelectorAll(".question"); // Находим все элементы с классом "question"
 
 let currentOpenButton = null;
 
-toggleButtons.forEach((button, index) =>
-  button.addEventListener("click", () => {
-    const targetId = button.getAttribute("data-target");
+toggleLine.forEach((line) => {
+  line.addEventListener("click", () => {
+    console.log("click on line");
+    const targetId = line.getAttribute("data-target");
     const targetElement = document.getElementById(targetId);
-
-    questionTexts.forEach((question) => {
-      question.classList.remove("bold");
-    });
-
-    // Проверяем, если есть текущая открытая стрелка
-    if (currentOpenButton && currentOpenButton !== button) {
-      const currentTargetId = currentOpenButton.getAttribute("data-target");
-      const currentTargetElement = document.getElementById(currentTargetId);
-      const currentQuestionText = questionTexts[index]; // Получаем соответствующий элемент с классом "question"
-
-      currentTargetElement.classList.remove("open");
-      currentOpenButton.classList.remove("closing");
-      currentOpenButton.classList.remove("rotated");
-      currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
-    }
-
     // Закрываем текущий текст
     if (targetElement.classList.contains("open")) {
       targetElement.classList.remove("open");
-      button.classList.remove("closing");
     } else {
       targetElement.classList.add("open");
-      button.classList.add("closing");
     }
-    questionTexts[index].classList.toggle("bold");
+  });
+});
 
-    // Обновляем текущую открытую стрелку
-    currentOpenButton = button;
+//   toggleButtons.forEach((button, index) =>
+//     button.addEventListener("click", () => {
+//
 
-    // if (targetElement.classList.contains("open")) {
-    //   targetElement.classList.remove("open");
-    //   button.style.transform = "rotate(0deg)";
-    //   button.style.transition = "transform 0.5s ease";
-    // } else {
-    //   targetElement.classList.add("open");
-    //   button.style.transform = "rotate(180deg)";
-    //   button.style.transition = "transform 0.5s ease";
-    // }
-  })
-);
+//       questionTexts.forEach((question) => {
+//         question.classList.remove("bold");
+//       });
+
+//       // Проверяем, если есть текущая открытая стрелка
+//       if (currentOpenButton && currentOpenButton !== button) {
+//         const currentTargetId =
+//           currentOpenButton.getAttribute("data-target");
+//         const currentTargetElement =
+//           document.getElementById(currentTargetId);
+//         const currentQuestionText = questionTexts[index]; // Получаем соответствующий элемент с классом "question"
+
+//         currentTargetElement.classList.remove("open");
+//         currentOpenButton.classList.remove("closing");
+//         currentOpenButton.classList.remove("rotated");
+//         currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
+//       }
+
+//       // Обновляем текущую открытую стрелку
+//       currentOpenButton = button;
+
+// toggleButtons.forEach((button, index) =>
+//   button.addEventListener("click", () => {
+//     const targetId = button.getAttribute("data-target");
+//     const targetElement = document.getElementById(targetId);
+
+//     questionTexts.forEach((question) => {
+//       question.classList.remove("bold");
+//     });
+
+//     // Проверяем, если есть текущая открытая стрелка
+//     if (currentOpenButton && currentOpenButton !== button) {
+//       const currentTargetId = currentOpenButton.getAttribute("data-target");
+//       const currentTargetElement = document.getElementById(currentTargetId);
+//       const currentQuestionText = questionTexts[index]; // Получаем соответствующий элемент с классом "question"
+
+//       currentTargetElement.classList.remove("open");
+//       currentOpenButton.classList.remove("closing");
+//       currentOpenButton.classList.remove("rotated");
+//       currentQuestionText.classList.remove("bold"); // Убираем выделение жирным
+//     }
+
+//     // Закрываем текущий текст
+//     if (targetElement.classList.contains("open")) {
+//       targetElement.classList.remove("open");
+//       button.classList.remove("closing");
+//     } else {
+//       targetElement.classList.add("open");
+//       button.classList.add("closing");
+//     }
+//     questionTexts[index].classList.toggle("bold");
+
+//     // Обновляем текущую открытую стрелку
+//     currentOpenButton = button;
+//   })
+// );
