@@ -1,42 +1,3 @@
-/* 
-
-## Colors
-
-### Primary
-
-#### Text
-
-- Very dark desaturated blue: hsl(238, 29%, 16%)
-- Soft red: hsl(14, 88%, 65%)
-
-#### Gradient
-
-Background gradient:
-
-- Soft violet: hsl(273, 75%, 66%)
-- Soft blue: hsl(240, 73%, 65%)
-
-### Neutral
-
-#### Text
-
-- Very dark grayish blue: hsl(237, 12%, 33%)
-- Dark grayish blue: hsl(240, 6%, 50%)
-
-#### Dividers
-
-- Light grayish blue: hsl(240, 5%, 91%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 12px
-
-### Font
-
-font-family: 'Kumbh Sans', sans-serif;
-- Weights: 400, 700 */
 body {
   background: linear-gradient(
     180deg,
@@ -114,15 +75,13 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease;
-  /* transition: max-height 0.3s ease; */
 }
 .bold {
   font-weight: 700;
 }
 .open {
-  max-height: 100px; /* Высота текста при открытии */
+  max-height: 100px;
   transition: max-height 0.1s ease;
-  /* transition: max-height 0.9s ease; */
 }
 .opening {
   transform: rotate(0deg);
@@ -146,7 +105,7 @@ p {
 @media screen and (max-width: 600px) {
   .container {
     flex-direction: column;
-    margin: 30% auto 10% auto;
+    margin: 40% auto 10% auto;
     width: 328px;
     height: 530px;
   }
@@ -171,7 +130,7 @@ p {
     height: 95px;
   }
   .faq {
-    padding: 0 30px 50px 30px;
+    padding: 10px 30px 50px 30px;
   }
   .faq h1 {
     text-align: center;
